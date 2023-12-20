@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="" label="champions" language="en" table="x_886019_champions_champions">
+    <sys_documentation element="" label="Champions" language="en" table="x_886019_champions_champions">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element/>
             <help/>
             <hint/>
-            <label>champions</label>
+            <label>Champions</label>
             <language>en</language>
             <name>x_886019_champions_champions</name>
-            <plural>champions</plural>
+            <plural>Champions</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2023-12-19 12:19:46</sys_created_on>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>champions</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Champions</sys_name>
             <sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package>
             <sys_policy/>
             <sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope>
             <sys_update_name>sys_documentation_x_886019_champions_champions__en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-12-19 12:19:46</sys_updated_on>
+            <sys_updated_on>2023-12-20 09:43:29</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

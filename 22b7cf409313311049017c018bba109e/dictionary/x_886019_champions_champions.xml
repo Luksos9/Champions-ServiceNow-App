@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="2e3947489313311049017c018bba1045" label="champions" max_length="40" name="x_886019_champions_champions" type="collection">
+    <element db_object_id="2e3947489313311049017c018bba1045" label="Champions" max_length="40" name="x_886019_champions_champions" type="collection">
         <element label="Abilities" max_length="32" name="abilities" reference="x_886019_champions_champion_abilities" type="reference"/>
         <element label="Active" max_length="40" name="active" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Description" max_length="500" name="description" type="string"/>
@@ -17,12 +17,16 @@
                 <element inactive_on_update="false" label="Top" value="top"/>
             </choice>
         </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element label="Title" max_length="40" name="title" type="string"/>
         <index name="index">
             <element name="abilities"/>
         </index>
         <index name="index2">
             <element name="name"/>
+        </index>
+        <index name="index3">
+            <element name="sys_class_name"/>
         </index>
     </element>
 </database>
