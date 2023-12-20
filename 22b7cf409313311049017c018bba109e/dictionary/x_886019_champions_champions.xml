@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2e3947489313311049017c018bba1045" label="champions" max_length="40" name="x_886019_champions_champions" type="collection">
+        <element label="Abilities" max_length="32" name="abilities" reference="x_886019_champions_champion_abilities" type="reference"/>
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="500" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="ChampionID" max_length="40" name="number" type="string"/>
+        <element label="Price" max_length="20" name="price" type="price"/>
+        <element label="Region" max_length="40" name="region" type="string"/>
+        <element label="Release Date" max_length="40" name="release_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="top" label="Role" mandatory="true" max_length="40" name="role" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="AD Carry" value="ad_carry"/>
+                <element inactive_on_update="false" label="Jungle" value="jungle"/>
+                <element inactive_on_update="false" label="Mid" value="mid"/>
+                <element inactive_on_update="false" label="Support" value="support"/>
+                <element inactive_on_update="false" label="Top" value="top"/>
+            </choice>
+        </element>
+        <element label="Title" max_length="40" name="title" type="string"/>
+        <index name="index">
+            <element name="abilities"/>
+        </index>
+        <index name="index2">
+            <element name="name"/>
+        </index>
+    </element>
+</database>

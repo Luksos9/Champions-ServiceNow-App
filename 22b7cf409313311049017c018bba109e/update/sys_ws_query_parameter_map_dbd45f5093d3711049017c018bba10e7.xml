@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter_map">
+    <sys_ws_query_parameter_map action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ws_query_parameter_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-20 07:49:06</sys_created_on>
+        <sys_id>dbd45f5093d3711049017c018bba10e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>57849b5093d3711049017c018bba10f6</sys_name>
+        <sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_map_dbd45f5093d3711049017c018bba10e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-20 07:49:06</sys_updated_on>
+        <web_service_operation display_value="Get Champions">a78157989393711049017c018bba1007</web_service_operation>
+        <web_service_query_parameter display_value="region">57849b5093d3711049017c018bba10f6</web_service_query_parameter>
+    </sys_ws_query_parameter_map>
+</record_update>

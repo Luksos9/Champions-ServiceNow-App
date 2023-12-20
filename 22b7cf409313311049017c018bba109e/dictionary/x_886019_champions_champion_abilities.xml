@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2cbf2b0493d3311049017c018bba1059" label="Champion Abilities" max_length="40" name="x_886019_champions_champion_abilities" type="collection">
+        <element label="E" max_length="40" name="e" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Q" max_length="40" name="q" type="string"/>
+        <element label="R" max_length="40" name="r" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="W" max_length="40" name="w" type="string"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

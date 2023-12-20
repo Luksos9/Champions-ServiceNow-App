@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="DELETE">
+        <active>true</active>
+        <base_uri>/api/x_886019_champions/get_champions</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>false</is_versioned>
+        <name>Champions</name>
+        <namespace>x_886019_champions</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>get_champions</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-20 07:34:15</sys_created_on>
+        <sys_id>4961db509393711049017c018bba10dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Champions</sys_name>
+        <sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope>
+        <sys_update_name>sys_ws_definition_4961db509393711049017c018bba10dc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-20 07:34:15</sys_updated_on>
+    </sys_ws_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Champions">22b7cf409313311049017c018bba109e</application>
+        <file_path/>
+        <instance_id>758c2a5cdb02759438f1172913961986</instance_id>
+        <instance_name>dev189969</instance_name>
+        <name>sys_ws_definition_4961db509393711049017c018bba10dc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_886019_champions/get_champions</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>Champions</name><namespace>x_886019_champions</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>get_champions</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-12-20 07:34:15</sys_created_on><sys_id>4961db509393711049017c018bba10dc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Champions</sys_name><sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package><sys_policy/><sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope><sys_update_name>sys_ws_definition_4961db509393711049017c018bba10dc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-12-20 07:34:15</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+        <payload_hash>-1492815310</payload_hash>
+        <record_name>Champions</record_name>
+        <reverted_from/>
+        <source>aeb7cbc49313311049017c018bba1042</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-20 07:34:15</sys_created_on>
+        <sys_id>bd7157989393711049017c018bba1003</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c8625867f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-20 07:34:15</sys_updated_on>
+        <type>Scripted REST API</type>
+        <update_guid>b17157982693711051e3fb7745d4ed03</update_guid>
+        <update_guid_history>b17157982693711051e3fb7745d4ed03:-1492815310</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-20 07:34:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_definition">sys_ws_definition</sys_db_object>
+        <sys_id>410e5c82ee5345849e0cf967d9b71664</sys_id>
+        <sys_metadata>4961db509393711049017c018bba10dc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Champions</sys_name>
+        <sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope>
+        <sys_scope_delete display_value="">070c1996af0747289885b6a71a3b28a4</sys_scope_delete>
+        <sys_update_name>sys_ws_definition_4961db509393711049017c018bba10dc</sys_update_name>
+        <sys_update_version display_value="sys_ws_definition_4961db509393711049017c018bba10dc">bd7157989393711049017c018bba1003</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-20 07:34:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

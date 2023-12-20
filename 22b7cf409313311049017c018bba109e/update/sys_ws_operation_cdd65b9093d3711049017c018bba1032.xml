@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create Champions</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+	var answer = [];
+	
+	var name;
+    var description;
+    var role;
+    var active;
+    var title;
+    var release_date;
+    var region;
+	
+	// Get the request body
+	var requestBody = request.body;
+	
+	// Convert JSON obj to JS string
+	var requestString = requestBody.dataString;
+	
+	//Conver JS string to arr
+	var result = JSON.parse(requestString);
+	
+	// For every champion in array, create a new record
+	try {
+		for (i in result.champions) {
+			name = result.champions[i].name;
+			description = result.champions[i].description;
+			role = result.champions[i].role;
+			active = result.champions[i].active;
+			title = result.champions[i].title;
+			release_date = result.champions[i].release_date;
+			region = result.champions[i].region;
+			
+			var championsGR = new GlideRecord('x_886019_champions_champions');
+			championsGR.initialize();
+			championsGR.name = name;
+			championsGR.description = description;
+			championsGR.role = role;
+			championsGR.active = active;
+			championsGR.title = title;
+			championsGR.release_date = release_date;
+			championsGR.region = region;
+			championsGR.insert();
+			
+			var championObj = {
+				"sys_id": championsGR.sys_id,
+				"number": championsGR.number
+			};
+			answer.push(championObj);
+		}
+		response.setStatus(201);
+	} catch(error) {
+		var serviceError = new sn_ws_err.ServiceError();
+		serviceError.setStatus(500);
+		serviceError.setMessage('Service Error');
+		serviceError.setDetail('The server could not process the request');
+		response.setError(serviceError);
+	}
+	
+	// Generate the response body with all champions created
+	response.setBody(answer);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_886019_champions/champions/champions</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/champions</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-20 07:58:04</sys_created_on>
+        <sys_id>cdd65b9093d3711049017c018bba1032</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create Champions</sys_name>
+        <sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope>
+        <sys_update_name>sys_ws_operation_cdd65b9093d3711049017c018bba1032</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-20 08:07:04</sys_updated_on>
+        <web_service_definition display_value="Champions">8f1f7e589353711049017c018bba1046</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
