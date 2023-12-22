@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>DELETE</http_method>
+        <name>Delete Champion (v2)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var answer = {};
+    
+    // Get The Number from the path parameter, otherwise 404
+    var number = request.pathParams.number;
+    if (!number) {
+        response.setError(new sn_ws_err.NotFoundError('Number not provided or Invalid Number'));
+        response.setStatus(404);
+        return;
+    }
+    
+    var championsGR = new GlideRecord('x_886019_champions_champions');
+    
+    // Check if the record exists and delete it
+    if (championsGR.get('number', number)) {
+        var championObj = {
+            "name": championsGR.getValue('name'),
+            "description": championsGR.getValue('description'),
+            "role": championsGR.getValue('role'),
+            "active": championsGR.getValue('active'),
+            'title': championsGR.getValue('title'),
+            "release_date": championsGR.getValue('release_date'),
+            'region': championsGR.getValue('region')
+        };
+
+        // Delete the record
+        var deletionResult = championsGR.deleteRecord();
+
+        if (deletionResult) {
+            // If deletion is successful
+            answer.result = "Success";
+            answer.message = "Champion '" + championObj.name + "' was successfully deleted.";
+            response.setStatus(200); // OK Status
+        } else {
+            // If deletion failed
+            answer.result = "Error";
+            answer.message = "Failed to delete the champion.";
+            response.setStatus(500); // Internal Server Error
+        }
+    } else {
+        // If no record is found
+        answer.result = "Error";
+        answer.message = "No champion found with the provided number.";
+        response.setStatus(404); // Not Found
+    }
+    
+    response.setBody(answer);
+
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/x_886019_champions/v2/champions/champion/{number}</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/champion/{number}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-21 18:54:22</sys_created_on>
+        <sys_id>aab6f2b09313311049017c018bba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete Champion (v2)</sys_name>
+        <sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope>
+        <sys_update_name>sys_ws_operation_aab6f2b09313311049017c018bba104f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-21 18:54:22</sys_updated_on>
+        <web_service_definition display_value="Champions">8f1f7e589353711049017c018bba1046</web_service_definition>
+        <web_service_version display_value="v2">22b6f2b09313311049017c018bba104d</web_service_version>
+    </sys_ws_operation>
+</record_update>

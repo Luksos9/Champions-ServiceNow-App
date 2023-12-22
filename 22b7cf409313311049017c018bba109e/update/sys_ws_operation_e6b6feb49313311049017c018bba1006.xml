@@ -3,10 +3,10 @@
         <active>true</active>
         <consumes>application/json</consumes>
         <consumes_customized>false</consumes_customized>
-        <default_operation_uri>/api/x_886019_champions/champions/champions</default_operation_uri>
+        <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <http_method>GET</http_method>
-        <name>Get Champions</name>
+        <name>Get Champions (v2)</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
     var answer = [];
@@ -22,10 +22,12 @@
 	
 
     var championsGR = new GlideRecord('x_886019_champions_champions');
-	if (name) {championsGR.addQuery('name', name); }
+	// For name and active we accept encoded query (so we not assign direct value from parameter)
+	if (name) { championsGR.addQuery(name); }
+	if (active) {championsGR.addQuery(active); }
+
 	if (description) {championsGR.addQuery('description', description); }
 	if (role) {championsGR.addQuery('role', role); }
-	if (active) {championsGR.addQuery('active', active); }
 	if (title) {championsGR.addQuery('title', title); }
 	if (release_date) {championsGR.addQuery('release_date', release_date); }
 	if (region) {championsGR.addQuery('region', region); }
@@ -54,7 +56,7 @@
     response.setBody(answer);
 
 })(request, response);]]></operation_script>
-        <operation_uri>/api/x_886019_champions/v1/champions/champions</operation_uri>
+        <operation_uri>/api/x_886019_champions/v2/champions/champions</operation_uri>
         <produces>application/json</produces>
         <produces_customized>false</produces_customized>
         <relative_path>/champions</relative_path>
@@ -65,17 +67,17 @@
         <short_description/>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-12-20 07:34:55</sys_created_on>
-        <sys_id>a78157989393711049017c018bba1007</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Get Champions</sys_name>
+        <sys_created_on>2023-12-21 18:54:22</sys_created_on>
+        <sys_id>e6b6feb49313311049017c018bba1006</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get Champions (v2)</sys_name>
         <sys_package display_value="Champions" source="x_886019_champions">22b7cf409313311049017c018bba109e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Champions">22b7cf409313311049017c018bba109e</sys_scope>
-        <sys_update_name>sys_ws_operation_a78157989393711049017c018bba1007</sys_update_name>
+        <sys_update_name>sys_ws_operation_e6b6feb49313311049017c018bba1006</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-12-21 18:53:39</sys_updated_on>
+        <sys_updated_on>2023-12-21 19:07:45</sys_updated_on>
         <web_service_definition display_value="Champions">8f1f7e589353711049017c018bba1046</web_service_definition>
-        <web_service_version display_value="v1">6386fab49313311049017c018bba1078</web_service_version>
+        <web_service_version display_value="v2">22b6f2b09313311049017c018bba104d</web_service_version>
     </sys_ws_operation>
 </record_update>
